@@ -1,0 +1,35 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  transition:  0.3s all;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  background-color: black;
+
+  .header {
+    height: 64px;
+    background-color: #000440;
+  }
+}
+body.light-mode {
+  background-color: white;
+
+  .header {
+    height: 64px;
+    background-color: coral;
+  }
+}
+
