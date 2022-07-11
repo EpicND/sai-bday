@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
 html,
 body {
   padding: 0;
@@ -16,20 +19,57 @@ a {
   box-sizing: border-box;
 }
 
-body.dark-mode {
-  background-color: black;
+.header {
+  width: 23%;
+  height: 100%;
 
-  .header {
-    height: 64px;
-    background-color: #000440;
-  }
+  left: 0px;
+  top: 0px;
+
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+
+  // NOTE: Will remove border eventually. rn its just there for reference
+  border-right: 1px black solid;
+
+  display: flex;
+  flex-direction: column;
 }
-body.light-mode {
-  background-color: white;
 
-  .header {
-    height: 64px;
-    background-color: coral;
-  }
+.page-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  
+  height: 100vh;
 }
 
+.content-container {
+  flex-grow: 1;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+
+
+.roboto {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.inconsolata {
+  font-family: 'Inconsolata', monospace;
+}
+
+.primary-txt {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.secondary-txt {
+  font-size: 13px;
+  color: gray;
+  line-height: 25px;
+}

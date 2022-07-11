@@ -15,13 +15,15 @@ export default function Layout({ children, router }) {
        
         return (
             <div>
-                <Header mode={darkMode.value} darkMode={darkMode}> </Header>
                 
-                <AnimatePresence exitBeforeEnter>
-                    <motion.div key = {router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ opacity: { duration: .5 }} }>
-                        {children}
-                    </motion.div>
-                </AnimatePresence>
+                <div className="page-container">
+                    <Header mode={darkMode.value} darkMode={darkMode}> </Header>
+                    <AnimatePresence exitBeforeEnter >
+                        <motion.div className="content-container" key = {router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ opacity: { duration: .5 }} }>
+                            {children}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
             </div>
         )
   }
