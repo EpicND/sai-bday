@@ -52,6 +52,48 @@ a {
   flex: 1 1 auto;
   overflow: auto;
 }
+ 
+.button-box {
+  font-size: 14px;
+}
+
+.bottom-box {
+  align-self: flex-end;
+  width: 100%;
+  margin-top: auto;
+}
+
+.icons-box {
+  width:100%;
+  display: flex;
+}
+
+.icon {
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.iconTwo {
+  margin-top: 1px;
+  height: 18px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.iconText {
+  color: gray;
+  transition-duration: 300ms;
+}
+
+.button {
+  transition-duration: 300ms;
+  color: gray;
+}
+
+.button:hover {
+  color:black;
+}
 
 
 
@@ -71,5 +113,17 @@ a {
 .secondary-txt {
   font-size: 13px;
   color: gray;
-  line-height: 25px;
+  line-height: 20px;
+}
+
+// 
+// 
+// 
+
+.container {
+  padding: 30px;
+}
+
+.title-image {
+  width: 100%;
 }
