@@ -1,15 +1,16 @@
 import Head from 'next/head';
-import { useRef, useCallback, useEffect } from 'react';
+import { useRef, useCallback, useEffect, useContext } from 'react';
 import Upload from '../components/Upload';
 import styles from '../styles/Home.module.css';
 import Row from '../components/Row';
 import Column from '../components/Column';
 
-
-export default function Home({ref}) {
+export default function Home({value}) {
 
   const images = ["/paintings/astronomy.jpg", "/paintings/avatar.jpg", "/paintings/birds.jpg", "/paintings/clouds.jpg", "/paintings/desert.jpg", "/paintings/flowers.jpg", "/paintings/kiwi.jpg", "/paintings/koi.jpg", "/paintings/lighthouse.jpg", "/paintings/mango.jpg", "/paintings/mountains.jpg", "/paintings/spongebob.jpg", "/paintings/winter.jpg",  "/paintings/moon.jpg"];
   const imagesTwo = ["/chalk/heart.jpg", "/digital/dragon.jpg", "/misc/hands.jpg", "/penned/globe.jpg",  "/misc/tyler.jpg", "/penned/lightbulb.jpg", "/digital/skeleton.jpg", "/penned/ring.jpg" ];
+  
+  console.log(value);
 
   return (
     <div className={styles.container} >
@@ -22,7 +23,7 @@ export default function Home({ref}) {
       <main className="container">
 
           <div className='mobile-text'>
-            <h1 className={styles.title} ref={ref} id="ttl">
+            <h1 className={styles.title} ref={value} id="ttl">
               Sai Shinde Art
             </h1>
             <a className='roboto secondary-txt'> High school student based in Plymouth, Minnesota creating diverse art pieces across a variety of mediums  </a>
@@ -30,7 +31,7 @@ export default function Home({ref}) {
 
           <img className="title-image" src="/personal_painting.jpg" />
 
-          <h1 className={styles.title} ref={ref} id="Drawings">
+          <h1 className={styles.title} id="Drawings">
             Drawings
           </h1>
 
