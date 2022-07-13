@@ -21,9 +21,6 @@ function Dropdown({route}) {
     await timeout(1000);
     copiedText.current.style.opacity = "0";
   }
-  useEffect(() => {
-    toggleHeader();
-  }, []);
 
   async function toggleHeader() {
     toggleHeaderIsOpen(!headerIsOpen);
