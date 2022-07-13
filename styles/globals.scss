@@ -236,12 +236,20 @@ a {
   }
 
   .container {
-    padding: 30px !important;
+    padding: 10px !important;
   }
 
   .top-box {
     height:30px;
     display:flex;
+  }
+
+  .container-one {
+    padding-right: 50px !important;
+  }
+
+  .container-two {
+    padding-left: 50px !important;
   }
 
   .header-mobile {
