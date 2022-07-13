@@ -5,7 +5,7 @@ function Column({images}) {
 
   for(var i = 0; i < images.length; i++) {
     elements.push(
-        <div key={i} className='image-div'>
+        <div key={i} className='image-div-two'>
             <img className="image" src={images[i]} />
         </div>
     );
