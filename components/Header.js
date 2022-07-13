@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from '../styles/Header.module.css';
-
 import Link from 'next/link';
 
-function Header() {
+function Header({route}) {
 
   const copiedText = useRef(null);
 
@@ -23,14 +22,14 @@ function Header() {
       <a className='roboto secondary-txt'> High school student based in Plymouth, Minnesota creating diverse art pieces across a variety of mediums  </a>
       <div className='button-box'>
       <br /> <br />
-          <div className="button"> <Link href="/indextwo" >  Home </Link> </div>  <br /> 
+          <div className={route=="/" ? "button-alt": "button"}> <Link href="/" >  Home </Link> </div>  <br /> 
+          <div className="button"><a href="#Drawings"> Drawings </a> </div> <br /> 
           <div className="button"><a href="#Paintings"> Paintings </a> </div> <br /> 
-          <div className="button"><a href="#Illustrations"> Illustrations </a> </div> <br /> 
-          <div className="button"> <a href="#Stickers"> Stickers </a> </div> <br /> 
-          <div className="button"><Link href="/about"> About Me </Link> </div> <br /> 
-          <div className="button"><Link href="/contact"> Contact </Link> </div> <br /> 
+          <div className="button"> <a href="#Miscellaneous"> Miscellaneous </a> </div> <br /> 
+          <div className={route=="/about" ? "button-alt": "button"}><Link href="/about"> About Me </Link> </div> <br /> 
+          <div className={route=="/contact" ? "button-alt": "button"}><Link href="/contact"> Contact </Link> </div> <br /> 
       </div>
-      <div className='bottom-box'>
+      <div className='bottom-box-alt'>
         <div className='icons-box'> 
           <a href="https://www.instagram.com/saispaintings_/"> <img className="icon" src="https://img.icons8.com/ios/50/808080/instagram-new--v1.png"/> </a>
           <img className="iconTwo" src="https://img.icons8.com/ios-filled/50/808080/etsy.png"/>

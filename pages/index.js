@@ -1,13 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import { useState } from 'react';
+import Head from 'next/head';
+import { useRef, useCallback, useEffect } from 'react';
+import Upload from '../components/Upload';
+import styles from '../styles/Home.module.css';
+import Row from '../components/Row';
+import Column from '../components/Column';
 
-export default function Home() {
+
+export default function Home({ref}) {
+
+  const images = ["/paintings/astronomy.jpg", "/paintings/avatar.jpg", "/paintings/birds.jpg", "/paintings/clouds.jpg", "/paintings/desert.jpg", "/paintings/flowers.jpg", "/paintings/kiwi.jpg", "/paintings/koi.jpg", "/paintings/lighthouse.jpg", "/paintings/mango.jpg", "/paintings/mountains.jpg", "/paintings/spongebob.jpg", "/paintings/winter.jpg",  "/paintings/moon.jpg"];
+  const imagesTwo = ["/chalk/heart.jpg", "/digital/dragon.jpg", "/misc/hands.jpg", "/penned/globe.jpg",  "/misc/tyler.jpg", "/penned/lightbulb.jpg", "/digital/skeleton.jpg", "/penned/ring.jpg" ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <Head>
         <title>Sai Shinde</title>
         <meta name="description" content="A website dedicated to my art" />
@@ -15,7 +20,51 @@ export default function Home() {
       </Head>
 
       <main className="container">
+
+          <div className='mobile-text'>
+            <h1 className={styles.title} ref={ref} id="ttl">
+              Sai Shinde Art
+            </h1>
+            <a className='roboto secondary-txt'> High school student based in Plymouth, Minnesota creating diverse art pieces across a variety of mediums  </a>
+          </div> 
+
           <img className="title-image" src="/personal_painting.jpg" />
+
+          <h1 className={styles.title} ref={ref} id="Drawings">
+            Drawings
+          </h1>
+
+          <div className='image-container container-one'>
+            <Upload url="/drawings/eyes.jpg" />
+          </div>
+          <div className='image-container container-two'>
+            <Upload url="/drawings/hands.jpg" />
+          </div>
+          <div className='image-container container-one'>
+            <Upload url="/drawings/shoes.jpg" />
+          </div>
+
+          <h1 className={styles.title} id="Paintings">
+            Paintings
+          </h1>
+
+          <Row images={images}> </Row>
+          
+          <div className='mobile-text-o'>
+            <h1 className={styles.title} id="Miscellaneous">
+              Miscellaneous 
+            </h1>
+          </div>
+
+          <div className='mobile-text'>
+            <h1 className={styles.title} id="Miscellaneous">
+              Misc. 
+            </h1>
+          </div>
+
+
+          <Row images={imagesTwo}> </Row>
+          
       </main> 
     </div>
   )

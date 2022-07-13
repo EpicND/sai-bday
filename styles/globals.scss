@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
 
+* {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -20,6 +24,7 @@ a {
 }
 
 .header {
+  min-width: 23%;
   width: 23%;
   height: 100%;
 
@@ -30,7 +35,7 @@ a {
   padding-left: 4%;
   padding-right: 4%;
   padding-top: 3%;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
 
   // NOTE: Will remove border eventually. rn its just there for reference
   border-right: 1px black solid;
@@ -58,9 +63,19 @@ a {
 }
 
 .bottom-box {
+  opacity: 0;
   align-self: flex-end;
   width: 100%;
   margin-top: auto;
+  transition-duration: 500ms !important;
+}
+
+.bottom-box-alt {
+  opacity: 1;
+  align-self: flex-end;
+  width: 100%;
+  margin-top: auto;
+  transition-duration: 500ms !important;
 }
 
 .icons-box {
@@ -91,6 +106,10 @@ a {
   color: gray;
 }
 
+.button-alt {
+  color: black;
+}
+
 .button:hover {
   color:black;
 }
@@ -110,6 +129,10 @@ a {
   margin-bottom: 20px;
 }
 
+.primary-txt-alt {
+  font-size: 24px;
+}
+
 .secondary-txt {
   font-size: 13px;
   color: gray;
@@ -121,9 +144,150 @@ a {
 // 
 
 .container {
-  padding: 30px;
+  padding: 50px;
 }
 
 .title-image {
   width: 100%;
+}
+
+.image-container {
+  display: flex;
+  width:100%;
+}
+
+.image-container-cl {
+  display: flex;
+  width:100%;
+  flex-direction: column;
+}
+
+.image-div {
+  flex-grow: 1;
+  width: auto;
+  padding: 5px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.image-alt {
+  width: 100%;
+  height: 100%;
+}
+
+.container-one {
+  padding-right:100px;
+  max-height: 70vh;
+}
+
+.container-two {
+  padding-left: 100px;
+}
+
+.mobile-text {
+  display: none;
+}
+
+.mobile-text-o {
+  display: block;
+}
+
+.header-mobile {
+  display: none;
+  z-index: 10;
+}
+
+.logo {
+  height: 30px;
+  width: 30x;
+  transition: all 500ms;
+}
+
+#ttl {
+  margin-bottom: 10px !important;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .header {
+    display: none;
+  }
+  .mobile-text {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .mobile-text-o {
+    display: none;
+  }
+
+  .Home_title__T09hD {
+    font-size: 3rem !important;
+    margin-top: 0px !important;
+    padding-top: 70px !important;
+  }
+
+  .image-container {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 30px !important;
+  }
+
+  .top-box {
+    height:30px;
+    display:flex;
+  }
+
+  .header-mobile {
+    display: block;
+    position: fixed;
+    flex-direction: column;
+    transition-duration: 500ms !important;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: 70px;
+    border-bottom: 1px solid black;
+  }
+
+  .primary-txt-alt {
+    align-self: flex-start;
+    flex-grow: 2;
+    text-align: left;
+    display: flex;
+  }
+
+  .primary-logo {
+    flex-grow: 1;
+  }
+
+  .button-box {
+    margin-left: -500px;
+    height: 50%;
+    display: none;
+    flex-direction: column;
+    font-size: 30px !important;
+    transition: all 500ms;
+  }
+
+  .button {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .button-alt {
+    flex-grow: 1;
+    display: flex;
+  }
+
+
+
 }
