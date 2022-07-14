@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Layout({ children, router }) {
 
+    const [currentPage, modifyCurrentPage] = useState("Home");
+
     function timeout(delay) {
         return new Promise( res => setTimeout(res, delay) );
       }
@@ -35,22 +37,53 @@ export default function Layout({ children, router }) {
 
       function isInViewport(element) {
         const rect = element.getBoundingClientRect();
+        
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top <= 100 && rect.top >= 0
         );
+    }
+
+    function exitedViewPort(element) {
+        const rect = element.getBoundingClientRect();
+        
+        return (
+            rect.bottom - window.innerHeight > 50 && rect.bottom - window.innerHeight < 150        );
+    }
+
+    function bobby() {
+        checkInView();
     }
 
     function checkInView () {
         if (typeof window !== 'undefined') {
-          const hashId = "paintings";
-            console.log("m");
-          if (isInViewport(document.querySelector(hashId))) {
-            console.log("ON")
-            }
+          if (isInViewport(document.querySelector("#Paintings"))) modifyCurrentPage("Paintings");
+          if (isInViewport(document.querySelector("#Drawings"))) modifyCurrentPage("Drawings");
+          if (isInViewport(document.querySelector("#Miscellaneous"))) modifyCurrentPage("Miscellaneous");
+
+          if (exitedViewPort(document.querySelector("#Drawings"))) modifyCurrentPage("Main");
+          if (exitedViewPort(document.querySelector("#Paintings"))) modifyCurrentPage("Drawings");
+          if (exitedViewPort(document.querySelector("#Miscellaneous"))) modifyCurrentPage("Paintings");
+
+        if(currentPage == "Drawings") {
+            document.getElementById("Draw").style.color = "black";
+        } else {
+            document.getElementById("Draw").style.color = "gray";
+        }
+
+        if(currentPage == "Paintings") {
+            document.getElementById("Paint").style.color = "black";
+        } else {
+            document.getElementById("Paint").style.color = "gray";
+        }
+
+        if(currentPage == "Miscellaneous") {
+            document.getElementById("Misc").style.color = "black";
+        } else {
+            document.getElementById("Misc").style.color = "gray";
+        }
+
           }
+          
         };
 
         return (
@@ -59,7 +92,7 @@ export default function Layout({ children, router }) {
                     <Header route={router.route}> </Header>
                     <Dropdown route={router.route}> </Dropdown> 
                     <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
-                        <motion.div onScroll={console.log("bobby")}
+                        <motion.div onScroll={bobby}
               className="content-container" key = {router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ opacity: { duration: .5 }} }>
                             {children}
                         </motion.div>

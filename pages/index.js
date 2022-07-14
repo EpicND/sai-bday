@@ -20,7 +20,7 @@ export default function Home({value}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container">
+      <main className="container"onScroll={console.log("bobby")}>
 
           <div className='mobile-text'>
             <h1 className={styles.title} ref={value} id="ttl">

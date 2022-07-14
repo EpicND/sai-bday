@@ -23,9 +23,9 @@ function Header({route}) {
       <div className='button-box'>
       <br /> <br />
           <div className={route=="/" ? "button-alt": "button"}> <Link href="/" >  Home </Link> </div>  <br /> 
-          <div className="button"> <Link href="/#Drawings"> Drawings  </Link> </div> <br /> 
-          <div className="button"> <Link href="/#Paintings"> Paintings  </Link> </div> <br /> 
-          <div className="button"> <Link href="/#Miscellaneous"> Miscellaneous  </Link> </div> <br /> 
+          <div className="button" id="Draw"> <Link href="/#Drawings"> Drawings  </Link> </div> <br /> 
+          <div className="button" id="Paint"> <Link href="/#Paintings"> Paintings  </Link> </div> <br /> 
+          <div className="button" id="Misc"> <Link href="/#Miscellaneous"> Miscellaneous  </Link> </div> <br /> 
           <div className={route=="/about" ? "button-alt": "button"}><Link href="/about"> About Me </Link> </div> <br /> 
           <div className={route=="/contact" ? "button-alt": "button"}><Link href="/contact"> Contact </Link> </div> <br /> 
       </div>
