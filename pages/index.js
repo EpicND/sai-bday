@@ -8,7 +8,7 @@ import Column from '../components/Column';
 export default function Home({value}) {
 
   const images = ["/paintings/astronomy.jpg", "/paintings/avatar.jpg", "/paintings/birds.jpg", "/paintings/clouds.jpg", "/paintings/desert.jpg", "/paintings/flowers.jpg", "/paintings/mountains.jpg", "/paintings/koi.jpg", "/paintings/lighthouse.jpg", "/paintings/mango.jpg", "/paintings/kiwi.jpg", "/paintings/spongebob.jpg", "/paintings/winter.jpg",  "", "/paintings/moon.jpg" ];
-  const imagesTwo = ["/chalk/heart.jpg", "/digital/dragon.jpg", "/misc/hands.jpg", "/penned/globe.jpg",  "/misc/tyler.jpg", "/penned/lightbulb.jpg", "/digital/skeleton.jpg", "/penned/ring.jpg" ];
+  const imagesTwo = ["/chalk/heart.jpg", "/digital/dragon.jpg", "/misc/hands.jpg", "/penned/globe.jpg",  "/misc/tyler.jpg", "/penned/lightbulb.jpg", "/digital/skeleton.jpg", "", "/penned/ring.jpg" ];
   
   console.log(value);
 
