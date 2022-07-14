@@ -21,7 +21,7 @@ function Row({images}) {
             <div className='image-div'>
                 <Column images={imagesOne} />
             </div>
-            <div className='image-div'>
+            <div className='image-div special-col'>
                 <Column images={imagesTwo} />
             </div>
             <div className='image-div'>
