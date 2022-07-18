@@ -19,13 +19,13 @@ function Row({images}) {
     <div>
         <div className='image-container'>
             <div className='image-div'>
-                <Column images={imagesOne} />
+                <Column images={imagesOne} ids="a" />
             </div>
             <div className='image-div special-col'>
-                <Column images={imagesTwo} />
+                <Column images={imagesTwo} ids="b"  />
             </div>
             <div className='image-div'>
-                <Column images={imagesThree} />
+                <Column images={imagesThree} ids="c"  />
             </div>
         </div>
     </div> 

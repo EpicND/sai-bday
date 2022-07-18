@@ -55,6 +55,10 @@ export default function Layout({ children, router }) {
     }
 
     function checkInView () {
+
+      if(router.route != "/") {
+
+      } else {
         if (typeof window !== 'undefined') {
           if (isInViewport(document.querySelector("#Paintings"))) modifyCurrentPage("Paintings");
           if (isInViewport(document.querySelector("#Drawings"))) modifyCurrentPage("Drawings");
@@ -83,6 +87,7 @@ export default function Layout({ children, router }) {
         }
 
           }
+        }
           
         };
 

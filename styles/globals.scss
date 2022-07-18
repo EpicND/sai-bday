@@ -177,7 +177,7 @@ a {
   margin-left: 10px !important;
 }
 
-.image-div-two:hover {
+.hovr:hover {
   width: 110% !important;
   margin-left: -5%;
 }
@@ -334,4 +334,33 @@ a {
     margin-bottom: 65px;
   }
 
+  .image-page {
+    height: 70vh !important;
+    margin-top: 70px;
+  }
+
+  .image-page-image {
+    width: 90% !important;
+    height: auto !important;
+  }
+
+}
+
+
+.image-page {
+  height: 90vh;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.image-page-image {
+  transition: all 500ms;
+  width: auto;
+  margin: auto;
+}
+
+.image-master {
+  text-align: center;
 }
