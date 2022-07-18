@@ -17,7 +17,7 @@ export default function Home({value}) {
       <Head>
         <title>Sai Shinde</title>
         <meta name="description" content="A website dedicated to my art" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <main className="container"onScroll={console.log("bobby")}>

@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>About Me</title>
         <meta name="description" content="About Me" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <main className={styles.main} >
